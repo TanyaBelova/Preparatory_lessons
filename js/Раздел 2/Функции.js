@@ -1,5 +1,7 @@
 "use strict";
 
+//Function Declaration
+
 // function showFirstMessage(text){
 //     console.log(text);
 // }
@@ -17,6 +19,9 @@
 //     return num;
 // }
 
+
+//Function Expression
+
 // const anotherNum = ret();
 // console.log(anotherNum);
 
@@ -24,8 +29,36 @@
 
 // };
 
-const calc = (a,b)=>a+b;
-const calc2 = a=>a+b;
-const calc3 = (a,b)=>{
-  return a+b;
-};
+//Стрелочные функции
+
+// const calc = (a,b)=>a+b;
+// const calc2 = a=>a+b;
+// const calc3 = (a,b)=>{
+//   return a+b;
+// };
+
+//Callback-функции
+
+function first(){
+  setTimeout(function(){
+    console.log(1); 
+    },500);
+}
+
+function second(){
+  console.log(2);
+}
+
+first();
+second();
+
+function learnJS(lang, callback){
+  console.log(`Я учу ${lang}!`);
+  callback();
+}
+
+function done(){
+  console.log("Я прошел этот урок!");
+}
+
+learnJS('JavaScript', done);
