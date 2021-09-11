@@ -2,43 +2,46 @@
 
 //Function Declaration
 
-// function showFirstMessage(text){
-//     console.log(text);
-// }
+// Объявили функцию
+function showFirstMessage(text){
+    console.log(text);
+}
 
-// showFirstMessage("Hello world");
+// Вызвали функцию
+showFirstMessage("Hello world");
 
-// function calc(a,b){
-//     return a + b;
-// }
+// Объявили функцию
+function calcTwoNumber(a,b){
+    return a + b;
+}
 
-// console.log(calc(5,5));
+// Вызвали функцию
+console.log(calcTwoNumber(5,5));
 
-// function ret(){
-//     let num =50;
-//     return num;
-// }
+// Функция, возвращающая результат
+function ret(){
+    let num =50;
+    return num;
+}
 
 
-//Function Expression
+// Function Expression
 
-// const anotherNum = ret();
-// console.log(anotherNum);
+const anotherNum = ret();
+console.log(anotherNum);
 
-// const logger = function(){
+const logger = function(){
 
-// };
+};
 
-//Стрелочные функции
-
-// const calc = (a,b)=>a+b;
-// const calc2 = a=>a+b;
-// const calc3 = (a,b)=>{
-//   return a+b;
-// };
+// Стрелочные функции
+const calc = (a,b)=>a+b;
+const calc2 = a=>a+5;
+const calc3 = (a,b)=>{
+  return a+b;
+};
 
 //Callback-функции
-
 function first(){
   setTimeout(function(){
     console.log(1); 
@@ -49,9 +52,11 @@ function second(){
   console.log(2);
 }
 
+// При вызове функции вторая с задержкой
 first();
 second();
 
+//Функция done вызывается только после завершения выполнения функции learnJS
 function learnJS(lang, callback){
   console.log(`Я учу ${lang}!`);
   callback();
